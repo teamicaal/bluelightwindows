@@ -100,18 +100,151 @@ import mixitup from 'mixitup';
     infinite: true,
   });
 
-  // Gallery Slider
-  $('.slick-gallery-slider').slick({
-    dots: false,
-    arrows: false,
-    infinite: false,
-    slidesToShow: 2,
-    autoplay: true,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-    draggable: true,
-    centerMode: false,
-  });
+ // Gallery Slider
+ $(".slick-gallery-slider").slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 4,
+  autoplay: true,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  draggable: true,
+  centerMode: false,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+
+$('.acc-slick').slick({
+  slidesToShow: 7,
+  infinite:true,
+  swipeToSlide: true,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+
+  responsive: [
+    {
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 3,
+        infinite:true,
+        swipeToSlide: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,        
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        infinite:true,
+        swipeToSlide: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,        
+      }
+    }
+  ]
+});
+
+$('.slick-products').slick({
+  slidesToShow: 4,
+  infinite:true,
+  swipeToSlide: true,
+  arrows: false,
+  centerMode:true,
+  centerPadding:"180px",
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1380,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode:false,
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode:false,
+      }
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode:false,
+      }
+    }
+  ]
+});
+
+$('.slick-mainpage-link').slick({
+  slidesToShow: 5,
+  infinite:true,
+  swipeToSlide: true,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1380,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode:false,
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode:false,
+      }
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode:false,
+      }
+    }
+  ]
+});
 
   $('.slick-p').on('click', function () {
     $(this).parent().prev().slick('slickPrev');
@@ -139,6 +272,17 @@ import mixitup from 'mixitup';
     }
   }
 
+  //key Features
+  var allContent = $('.accordion-text');
+  var allToggle = $('.accordion-heading').click(function() {
+    var thisToggle = $(this);
+    var thisContent = thisToggle.next();
+    allToggle.not(thisToggle).addClass('collapsed');
+    allContent.not(thisContent).addClass('collapse');
+    thisToggle.toggleClass('collapsed');
+    thisContent.toggleClass('collapse');
+  })
+
   // Accordion
   $('.accordionTitle').on('click', function () {
     var $this = $(this);
@@ -149,13 +293,19 @@ import mixitup from 'mixitup';
     })
   });
 
-  // Smooth Scroll 
-  $('.btn-scroll').on('click', function (e) {
-    e.preventDefault()
-    $('html, body').animate(
-      { scrollTop: $($(this).attr('href')).offset().top - 150 }, 400
-    );
-  })
+  // smooth scroll
+   
+$(document).on('click', 'a[href^="#"]', function (event) {
+  event.preventDefault();
+  $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top -130 }, 700);
+});
+
+  $('.product-link').hover(function(){
+    $(this).find('.product-bottom-content').removeClass('sm:hidden');
+  }, function(){
+    $(this).find('.product-bottom-content').addClass('sm:hidden');
+  });
 
   // Cookie Policy
   $.fn.CookieNotice = function () {

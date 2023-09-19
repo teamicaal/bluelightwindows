@@ -29,10 +29,10 @@
 
       li {
         a {
-          @apply block text-gray-800 font-normal border-b border-gray-200 px-8 py-4;
+          @apply block text-gray-800 font-normal border-b border-gray-200 px-8 py-4 border-none;
 
           &:hover {
-            @apply text-primary;
+            @apply text-primary border-none;
           }
         }
 
@@ -113,15 +113,23 @@
     > ul {
       > li {
         > a {
-          @apply text-xs text-gray-800 font-normal uppercase tracking-wide inline-block px-4 py-8;
+          @apply text-[#465469] font-bold uppercase tracking-wide inline-block px-4 py-8 border-none;
 
           &:hover {
-            @apply text-primary;
+            @apply text-primary border-none;
           }
+        }
+        &:not(:nth-last-child(-n+1)) {
+
+          &::after {
+            content: '';
+            @apply absolute top-1/2 -translate-y-1/2 right-0 ml-4 bottom-0 h-1/2 w-[1px] bg-gray-300;
+          }
+
         }
 
         > .sub-menu {
-          @apply bg-gray-100;
+          @apply bg-gray-100 border-none;
 
           top: 54px;
 
@@ -146,7 +154,10 @@
       > li {
         &:not(.btn-toolbar) {
           a {
-            @apply px-4 py-8  font-normal;
+            @apply px-4 py-8 text-white font-normal border-none tracking-wider;
+            &:hover {
+              @apply text-[#E89604];
+            }
           }
         }
 
@@ -190,7 +201,7 @@
           @apply relative;
 
           a {
-            @apply block text-xs text-gray-800 font-normal px-4 py-3;
+            @apply block text-gray-800 text-sm tracking-wide font-normal px-4 py-3;
 
             &:hover {
               @apply text-primary;
@@ -220,11 +231,11 @@
 
 .btn-toolbar {
   a {
-    @apply inline-block text-xs bg-primary font-sans font-normal uppercase tracking-wide rounded-sm leading-none;
-    @apply text-white p-3 #{!important};
+    @apply inline-block text-xs bg-[#E89604] font-sans font-normal uppercase tracking-wide rounded-sm leading-none;
+    @apply text-white py-3 px-8 #{!important};
 
     &:hover {
-      @apply bg-blue-600;
+      @apply bg-white text-[#39383A] #{!important};
     }
   }
 }

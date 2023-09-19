@@ -5,10 +5,10 @@ $count = count($images);
 @endphp
 
 
-<section class="section_page-banner {{ $banner_type ? 'center' : 'start' }} relative h-[84vh]">
+<section class="product-overlay {{ $banner_type ? 'center' : 'start' }} relative h-[75vh]">
   <div class="!absolute inset-0 h-full w-full {{ $count > 1 ? 'slick-banner ' : '' }}">
     @foreach($images as $key=>$image )
-      <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[84vh] sm:!min-h-[84vh] !min-h-[84vh]">
+      <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[75vh] sm:!min-h-[75vh] !min-h-[75vh]">
         <picture data-iesrc="{!! $image['url'] !!}">
             <source media="(min-width: 768px)" srcset="{!! wp_get_attachment_image_srcset($image['id']) !!}" type="image/jpg" />
           <img src="{{ $image['sizes']['lozad'] }}" data-src="{{ $image['sizes']['4by3-xl'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
@@ -20,7 +20,7 @@ $count = count($images);
    @if (get_sub_field('logo'))   
     <img class="z-10 absolute top-20 right-0 w-15 h-15 object-contain" src=@sub('logo','url') alt="@sub('logo','alt')">
    @endif
-    <div   class="content flex flex-col justify-center {{ $banner_type ? 'items-center mx-auto [&>*]:text-center' : 'items-start' }}  h-full w-full relative z-10 gap-4">
+    <div   class="content flex flex-col justify-center items-center text-center  h-full w-full relative z-10 gap-4">
       @if (get_sub_field('subtitle'))
         <h3 class="text-white uppercase ">@sub('subtitle')</h3>
       @endif

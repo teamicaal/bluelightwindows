@@ -18,28 +18,28 @@
   $social_pinterest = get_field('social_pinterest', 'option');
   @endphp
 @endif
-<header class="banner fixed z-20 top-0 left-0 right-0 w-full">
-  <div id="toolbar" class="bg-gray-100 hidden lg:block">
+<header class="banner fixed z-20 top-0 left-0 right-0 w-full shadow-lg">
+  <div id="toolbar" class="bg-primary hidden lg:block">
     <div class="container mx-auto">
       <div class="flex justify-between items-center">
         <ul class="list-reset">
           @if( $brand_phone_link )
           <li class="inline-block text-sm mr-8">
             <a href="tel:{{ $brand_phone_link }}">
-              <i class="text-primary fa fa-phone inline-block float-left mr-2 mt-0.5"></i>
-              <span class="table-cell text-gray-800 font-body">{{ $brand_phone_label ? $brand_phone_label : $brand_phone_link }}</span>
+              <i class="text-white fa fa-phone inline-block float-left mr-2 mt-0.5"></i>
+              <span class="table-cell text-white font-body tracking-wide">{{ $brand_phone_label ? $brand_phone_label : $brand_phone_link }}</span>
             </a>
           </li>
           @endif
           @if( $brand_email )
           <li class="inline-block text-sm mr-8">
             <a href="mailto:{{ $brand_email }}">
-              <i class="text-primary fa fa-envelope-open inline-block float-left mr-2 mt-0.5"></i>
-              <span class="table-cell text-gray-800 font-body">{{ $brand_email }}</span>
+              <i class="text-white fa fa-envelope-open inline-block float-left mr-2 mt-0.5"></i>
+              <span class="table-cell text-white font-body tracking-wide">{{ $brand_email }}</span>
             </a>
           </li>
           @endif
-          @include('partials.components.social_icons')
+          @include('partials.components.social_icons', ['location'=>'header'])
         <div class="nav-toolbar nav-has-dropdowns">
           @if( has_nav_menu('toolbar') )
             {!! wp_nav_menu(['theme_location' => 'toolbar', 'menu_class' => 'nav nav-has-dropdowns list-reset']) !!}
@@ -52,9 +52,9 @@
     <div class="bg-white">
       <div class="container mx-auto flex items-center justify-between py-2 lg:py-0">
         {!! $brand_phone_link ? '<a href="tel:' . $brand_phone_link . '" class="lg:hidden px-4 py-2 -ml-2"><i class="fa fa-phone"></i></a>' : null; !!}
-        <a class="brand border-0" href="{{ home_url('/') }}">
+        <a class="brand border-0 py-2" href="{{ home_url('/') }}">
           @if( $logo )
-          <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden lg:inline-block">
+          <img src="{!! $logo['url'] !!}" alt="{!! get_bloginfo('name', 'display') !!} Logo"{!! $logo_retina ? ' srcset="' . $logo['url'] . ' 1x, ' . $logo_retina['url'] . ' 2x"' : null !!} width="auto" height="50" class="hidden w-auto h-[5rem] lg:inline-block">
           @else
           {{ get_bloginfo('name', 'display') }}
           @endif

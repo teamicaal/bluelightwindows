@@ -17,6 +17,36 @@
         @if (get_row_layout() == 'banner')
             @include('partials.flexible-content.banner')
         @endif
+        @if (get_row_layout() == 'product_banner')
+            @include('partials.flexible-content.product-banner')
+        @endif
+        @if (get_row_layout() == 'more_information')
+            @include('partials.flexible-content.more-information')
+        @endif
+        @if (get_row_layout() == 'why_choose_us')
+            @include('partials.flexible-content.why-choose-us')
+        @endif
+        @if (get_row_layout() == 'global_one_cta')
+            @include('partials.flexible-content.global-one-cta')
+        @endif
+        @if( get_row_layout() == 'new_testimonial' )
+            @include('partials.flexible-content.new-testimonial')
+        @endif
+        @if( get_row_layout() == 'products_page_link' )
+            @include('partials.flexible-content.products-page-link')
+        @endif
+        @if( get_row_layout() == 'products_cta' )
+            @include('partials.flexible-content.product-cta')
+        @endif
+        @if (get_row_layout() == 'product_brochure')
+            @include('partials.flexible-content.product-brochure')
+        @endif
+        @if (get_row_layout() == 'brochure_page')
+            @include('partials.flexible-content.brochure-page')
+        @endif
+        @if (get_row_layout() == 'video_page')
+            @include('partials.flexible-content.video-page')
+        @endif
         @if (get_row_layout() == 'cta')
             @include('partials.flexible-content.cta-block')
         @endif
