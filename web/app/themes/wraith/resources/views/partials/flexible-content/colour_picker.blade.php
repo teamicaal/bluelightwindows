@@ -54,7 +54,7 @@ $body = get_sub_field('body');
                     : null
                 !!}
             </div>
-            <div class="w-full lg:w-1/3 max-w-4xl rounded-xl bg-[#EFEFEF] p-8 lg:p-12 order-1 lg:order-2">
+            <div class="w-full lg:w-1/2 max-w-4xl rounded-xl bg-[#EFEFEF] p-8 lg:p-12 order-1 lg:order-2">
                 <div class="w-full embed-4by3 overflow-hidden">
                     <img src="/app/uploads/renders/{{ $product }}-white.webp"
                         alt="{{ $product }}-{{ strtolower($clr_option['title']) }}"
