@@ -791,3 +791,23 @@ a {
   .bg-product-cta{
     background-image: url('../../../../uploads/2023/09/shutterstock_1743489542.jpg');
   }
+
+  #colour_picker {
+    @screen lg {
+        .colourSwtach {
+            display: none ;
+            opacity: 0;
+            transition: opacity .75s ease;
+
+            &.active {
+                display: inline-block ;
+                opacity: 1;
+            }
+        }
+    }
+    .colourSwtach {
+            &.selected {
+                border: 3px solid #3392BF;
+            }
+    }
+  }

@@ -324,6 +324,25 @@ $(document).on('click', 'a[href^="#"]', function (event) {
   })
   $('#cookie-notice').CookieNotice();
 
+ // Colour Picker
+ $('.swtachPage').on('click', function () {
+  var pageNumber = $(this).data('page');
+  $('.swtachPage').removeClass('bg-primary').addClass('bg-gray-400');
+  $(this).removeClass('bg-gray-400').addClass('bg-primary');
+  $('.colourSwtach').removeClass('active');
+  $('.colourSwtach[data-swatch=' + pageNumber + ']').addClass('active');
+})
+
+$('.colourSwtachitem').on('click', function () {
+  $('.colourSwtachitem').removeClass('selected');
+  $(this).addClass('selected');
+  var colour = $(this).children('img').data('colour');
+  var product = $(this).children('img').data('product');
+  var image = $('.colourFrame');
+  image.attr("src", '/app/uploads/renders/' + product + '-' + colour + '.webp');
+  image.attr("alt", product + '-' + colour);
+})
+
   // Share Button
   $('.page-share').on('click', function () {
     if (navigator.share) {

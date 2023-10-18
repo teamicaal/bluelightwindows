@@ -35,6 +35,9 @@
         @if( get_row_layout() == 'products_page_link' )
             @include('partials.flexible-content.products-page-link')
         @endif
+        @if (get_row_layout() == 'colour_picker')
+            @include('partials.flexible-content.colour_picker')
+        @endif
         @if( get_row_layout() == 'products_cta' )
             @include('partials.flexible-content.product-cta')
         @endif
