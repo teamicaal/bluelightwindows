@@ -92,6 +92,9 @@
         @if (get_row_layout() == 'page_links_simple')
             @include('partials.flexible-content.page-links-simple')
         @endif
+        @if (get_row_layout() == 'hub_page_simple_page_links')
+            @include('partials.flexible-content.hub-page-links-simple')
+        @endif
         @if (get_row_layout() == 'products')
             @include('partials.flexible-content.products')
         @endif
