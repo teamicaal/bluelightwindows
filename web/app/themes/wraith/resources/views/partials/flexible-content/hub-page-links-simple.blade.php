@@ -4,7 +4,7 @@ $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 @endphp
 
-<section class=" {!! $custom_class ? ' ' . $custom_class : 'py-8' !!} ">
+<section class=" {!! $custom_class ? ' ' . $custom_class : 'py-8' !!} container mx-auto ">
 
     <div class="!px-0 text-center text-primary">
         {!! $title ? '<h2 class="text-[#39383A] capitalize font-bold text-center tracking-wide text-3xl lg:text-4xl mb-12  ">' . $title . '</h2>' : null !!}
@@ -18,7 +18,7 @@ $subtitle = get_sub_field('subtitle');
                         $custom_paragraph = get_sub_field('custom_paragraph');
                     @endphp
                     @if ($page)
-                        <div class="w-full md:w-1/2 lg:w-1/5 px-2 product-link" style="flex: 0 0 auto;">
+                        <div class="w-full md:w-1/2 lg:w-1/5 px-2 mb-4 product-link" style="flex: 0 0 auto;">
                             <a href="{{ get_the_permalink($page->ID) }}" class="embed-1by1 w-full relative rounded-sm overflow-hidden mb-6 lg:mb-0">
                                 <img data-src="{{ get_the_post_thumbnail_url($page->ID) }}" src="{{ get_the_post_thumbnail_url($page->ID, 'lozad') }}" alt="{!! $custom_title ? $custom_title : $page->title !!}" class="lozad object-fit-cover" />
                                   <div class="w-full  product-bottom-bg bottom-0 left-0 p-4">
