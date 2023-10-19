@@ -11,7 +11,7 @@ $count = count($images);
       <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[84vh] sm:!min-h-[84vh] !min-h-[84vh]">
         <picture data-iesrc="{!! $image['url'] !!}">
             <source media="(min-width: 768px)" srcset="{!! wp_get_attachment_image_srcset($image['id']) !!}" type="image/jpg" />
-          <img src="{{ $image['sizes']['lozad'] }}" data-src="{{ $image['sizes']['4by3-xl'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
+          <img src="{{ $image['url'] }}" data-src="{{ $image['url'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
         </picture>
       </div>
     @endforeach
