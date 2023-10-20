@@ -178,11 +178,13 @@ $('.slick-products').slick({
   slidesToShow: 4,
   infinite:true,
   swipeToSlide: true,
-  arrows: false,
+  arrows: true,
   centerMode:true,
   centerPadding:"180px",
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 3000,
+  prevArrow: $('.product-arrow-p'),
+  nextArrow: $('.product-arrow-n'),
   responsive: [
     {
       breakpoint: 1380,

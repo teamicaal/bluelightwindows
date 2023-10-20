@@ -9,7 +9,7 @@
     <div class="w-full relative">
         <h2 class="mb-4 font-bold text-center text-2xl md:text-4xl">{{ $title }}</h2>
         @if (have_rows('pages'))
-            <div class="w-full slick-products">
+            <div class="w-full slick-products relative">
 
                 @while (have_rows('pages'))
                     @php
@@ -28,7 +28,7 @@
                                         alt="{!! $custom_title ? $custom_title : $page->title !!}" itemprop="thumbnail">
                                         <div class="product-link-overlay mix-blend-multiply absolute w-full h-full"></div>
                                     <h2
-                                        class="absolute text-center uppercase -translate-x-1/2 left-1/2 bottom-4 font-bold text-lg  text-white mx-auto tracking-widest">
+                                        class="absolute w-full px-2 lg:px-0 text-center uppercase -translate-x-1/2 left-1/2 bottom-4 font-bold lg:text-lg  text-white mx-auto tracking-widest">
                                         {!! $custom_title ? $custom_title : $page->post_title !!}</h2>
                                 </div>
                             </a>
@@ -48,14 +48,22 @@
                                         src="{{ $custom_image['sizes']['4by3-sm'] }}" alt="{!! $custom_title ? $custom_title : $custom_image['alt'] !!}"
                                         itemprop="thumbnail">
                                     <h2
-                                        class="absolute text-center uppercase -translate-x-1/2 left-1/2 bottom-4 font-bold text-lg  text-white mx-auto tracking-widest">
+                                        class="absolute w-full px-2 lg:px-0  text-center uppercase -translate-x-1/2 left-1/2 bottom-4 font-bold lg:text-lg text-white mx-auto tracking-widest">
                                         {{ $custom_title }}</h2>
                                 </div>
                             </a>
                         </div>
                     @endif
+                    
                 @endwhile
             </div>
+            
+            <button type="button" class="absolute inset-0 mr-auto my-auto product-arrow-p w-12 h-12 ml-4 text-center rounded-full text-neutral-500 bg-neutral-50 hover:bg-primary hover:text-white transition inline-block">
+                <i class="fa fa-arrow-left align-middle text-xl"></i>
+            </button>
+            <button type="button" class="absolute inset-0 ml-auto my-auto product-arrow-n w-12 h-12 mr-4 text-center rounded-full text-neutral-500 bg-neutral-50 hover:bg-primary hover:text-white transition inline-block">
+                <i class="fa fa-arrow-right align-middle text-xl"></i>
+            </button>
         @endif
     </div>
 </section>
