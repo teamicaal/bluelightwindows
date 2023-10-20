@@ -811,3 +811,13 @@ a {
             }
     }
   }
+
+  @media (max-width: 1279px) {
+    main#primary {
+      margin-top: 57px;
+  
+      @screen lg {
+        margin-top: 125px !important;
+      }
+    }
+  }
