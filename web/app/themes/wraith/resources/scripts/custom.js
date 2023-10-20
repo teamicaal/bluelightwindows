@@ -181,7 +181,7 @@ $('.slick-products').slick({
   arrows: true,
   centerMode:true,
   centerPadding:"180px",
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 3000,
   prevArrow: $('.product-arrow-p'),
   nextArrow: $('.product-arrow-n'),
