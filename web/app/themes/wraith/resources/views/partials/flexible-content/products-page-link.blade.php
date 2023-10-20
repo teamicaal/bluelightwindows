@@ -58,10 +58,10 @@
                 @endwhile
             </div>
             
-            <button type="button" class="absolute inset-0 mr-auto my-auto product-arrow-p w-12 h-12 ml-4 text-center rounded-full text-neutral-500 bg-neutral-50 hover:bg-primary hover:text-white transition inline-block">
+            <button type="button" class="absolute inset-0 mr-auto my-auto product-arrow-p w-12 h-12 lg:ml-[5rem] ml-4 text-center rounded-full text-neutral-500 bg-neutral-50 hover:bg-primary hover:text-white transition inline-block">
                 <i class="fa fa-arrow-left align-middle text-xl"></i>
             </button>
-            <button type="button" class="absolute inset-0 ml-auto my-auto product-arrow-n w-12 h-12 mr-4 text-center rounded-full text-neutral-500 bg-neutral-50 hover:bg-primary hover:text-white transition inline-block">
+            <button type="button" class="absolute inset-0 ml-auto my-auto product-arrow-n w-12 h-12 lg:mr-[5rem] mr-4 text-center rounded-full text-neutral-500 bg-neutral-50 hover:bg-primary hover:text-white transition inline-block">
                 <i class="fa fa-arrow-right align-middle text-xl"></i>
             </button>
         @endif
