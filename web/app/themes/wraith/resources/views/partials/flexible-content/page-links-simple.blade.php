@@ -7,7 +7,17 @@ $subtitle = get_sub_field('subtitle');
 <section class=" {!! $custom_class ? ' ' . $custom_class : 'py-8' !!} ">
 
     <div class="!px-0 text-center text-primary">
+      <div class="container mx-auto flex justify-center lg:w-[80%] lg:px-0 px-2 w-full mb-2">
         {!! $title ? '<h2 class="text-[#39383A] capitalize font-bold text-center tracking-wide text-3xl lg:text-4xl mb-12  ">' . $title . '</h2>' : null !!}
+        <div class="flex items-center justify-center mb-4">
+          <button class="w-12 page-link-arrow-p flex items-center justify-center h-12 ">
+              <i class="fa fa-arrow-left bg-neutral-50 hover:bg-primary text-neutral-500 hover:text-white border border-neutral-200 hover:border-white text-sm p-3"></i>
+          </button>
+          <button class="w-12  page-link-arrow-n flex items-center justify-center h-12 ">
+              <i class="fa fa-arrow-right bg-neutral-50 hover:bg-primary text-neutral-500 hover:text-white border border-neutral-200 hover:border-white text-sm p-3"></i>
+          </button>
+        </div>
+      </div>
         @if (have_rows('pages'))
             <div class="flex-wrap slick-mainpage-link flex lg:justify-center snap-x overflow-x-scroll lg:overflow-hidden px-2">
                 @while (have_rows('pages'))

@@ -215,9 +215,11 @@ $('.slick-mainpage-link').slick({
   slidesToShow: 5,
   infinite:true,
   swipeToSlide: true,
-  arrows: false,
+  arrows: true,
   autoplay: true,
   autoplaySpeed: 3000,
+  prevArrow: $('.page-link-arrow-p'),
+  nextArrow: $('.page-link-arrow-n'),
   responsive: [
     {
       breakpoint: 1380,
