@@ -10,7 +10,7 @@
     <div class="container mx-auto flex justify-center">
         <div class="lg:w-1/2 w-full">
             @if ($title)
-            <h2 class="text-3xl lg:text-4xl text-[#5B5B5B] font-serif font-bold mb-8">{{ $title }}</h2>
+            <h2 class="text-[#39383A] capitalize font-bold text-center tracking-wide text-3xl lg:text-4xl mb-12">{{ $title }}</h2>
             @endif
 
             @if ($paragraph)
