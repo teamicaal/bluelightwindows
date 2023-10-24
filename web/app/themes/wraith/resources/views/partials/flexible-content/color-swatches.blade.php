@@ -34,7 +34,7 @@ $custom_class = get_sub_field('custom_class');
                         <div class="relative flex group">
                             @if ($title)
                             <span
-                                class="absolute -top-14 left-1/2 -translate-x-1/2 font-serif bg-secondary text-sm text-white rounded-full py-2 px-4 mb-6 uppercase min-w-max hidden group-hover:inline-block">{{ $title }}</span>
+                                class="absolute -top-14 left-1/2 -translate-x-1/2 font-serif bg-primary text-sm text-white rounded-full py-2 px-4 mb-6 uppercase min-w-max hidden group-hover:inline-block">{{ $title }}</span>
                             @endif
                             <div class="aspect-square h-[75px] rounded-full shadow-lg overflow-hidden cursor-pointer">
                                 <img data-image-src="{{ $title_clean }}" class="w-full h-full object-cover"
