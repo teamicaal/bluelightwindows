@@ -15,17 +15,17 @@
 		@endphp
 			<div class="flex flex-col {{ $i % 2 == 0 ? 'lg:flex-row-reverse flex-col' : 'lg:flex-row flex-col' }}">
 				@if( $image )
-					<div class="w-full lg:w-3/5">
-						<div class="embed embed-16by9 ">
-							<iframe src="{!! $video_iframe_url !!}" class="object-cover-absolute w-full h-full"></iframe>
-						</div>
+				<div class="w-full lg:w-1/2">
+					<div class="embed-16by9 overflow-hidden">
+						<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0">
 					</div>
+				</div>
 				@else
-					<div class="w-full lg:w-1/2">
-						<div class="embed-16by9 overflow-hidden">
-							<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0">
-						</div>
+				<div class="w-full lg:w-3/5">
+					<div class="embed embed-16by9 ">
+						<iframe src="{!! $video_iframe_url !!}" class="object-cover-absolute w-full h-full"></iframe>
 					</div>
+				</div>
 				@endif
 				<div class="w-full lg:w-1/2 px-4 lg:px-16 py-4 lg:py-0">
 					<div class="flex flex-col items-start justify-center h-full lg:max-w-[70%] w-full mx-auto">
