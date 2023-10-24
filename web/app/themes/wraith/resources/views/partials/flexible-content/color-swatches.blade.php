@@ -6,7 +6,7 @@
 @endphp
 
 
-<section class="my-12">
+<section id="color-swatches" class="{!! $custom_class ? $custom_class : ' lg:py-20 py-12'; !!}">
     <div class="container mx-auto flex justify-center">
         <div class="lg:w-1/2 w-full">
             @if ($title)
@@ -20,7 +20,7 @@
                 @php
                     $i = 0;
                 @endphp
-                <div class="flex flex-wrap justify-center gap-x-8 gap-y-16 pt-14 max-w-[610px]">
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-16 max-w-[610px] mx-auto">
                     @while (have_rows('colour_swatch'))
                         @php
                             the_row();
