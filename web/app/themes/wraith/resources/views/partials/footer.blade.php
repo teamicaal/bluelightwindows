@@ -54,10 +54,10 @@
 </footer>
 <section class="bg-[#1179AA] py-4 pb-16 lg:pb-4">
   <div class="container mx-auto md:flex justify-between items-center">
-    <p class="text-white text-center tracking-wider text-sm my-4">
+    <p class="text-white text-center tracking-wider my-4">
       © {!! date('Y') !!} {!! $footer_copyright ? $footer_copyright : get_bloginfo('name') !!}
     </p>
-    <p class="text-white text-sm text-center my-1">
+    <p class="text-white text-center my-1">
       <a href="/privacy-policy/" class="text-white font-normal" target="_blank">Privacy Policy</a> <span class="mx-4 text-2xl text-white">|</span> <a href="/cookie-policy/" class="text-white font-normal" target="_blank">Cookie Policy </a>
     </p>
     {{-- <a href="https://www.internetconsultancy.pro" target="_blank" title="Made with ♥ by ICAAL - www.icaal.co.uk" class="border-0 text-white hover:text-gray-200">
