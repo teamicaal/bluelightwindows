@@ -20,7 +20,7 @@ $count = count($images);
    @if (get_sub_field('logo'))   
     <img class="z-10 absolute top-20 right-0 w-15 h-15 object-contain" src=@sub('logo','url') alt="@sub('logo','alt')">
    @endif
-    <div   class="content flex flex-col justify-center {{ $banner_type ? 'items-center mx-auto [&>*]:text-center' : 'items-start' }}  h-full w-full relative z-10 gap-4">
+    <div   class="content flex flex-col justify-center {{ $banner_type ? 'items-center mx-auto [&>*]:text-center' : 'items-start' }}  ml-auto h-full w-full relative z-10 gap-4">
       @if (get_sub_field('subtitle'))
         <h3 class="text-white uppercase ">@sub('subtitle')</h3>
       @endif
