@@ -20,7 +20,7 @@
                 @php
                     $i = 0;
                 @endphp
-                <div class="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-16 pt-14 max-w-[610px]">
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-16 pt-14 max-w-[610px]">
                     @while (have_rows('colour_swatch'))
                         @php
                             the_row();
