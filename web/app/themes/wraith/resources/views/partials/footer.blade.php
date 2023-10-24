@@ -53,7 +53,7 @@
   </div>
 </footer>
 <section class="bg-[#1179AA] py-4 pb-16 lg:pb-4">
-  <div class="container mx-auto md:flex justify-between items-center">
+  <div class="container mx-auto md:flex justify-center items-center">
     <p class="text-white text-center tracking-wider my-4">
       © {!! date('Y') !!} {!! $footer_copyright ? $footer_copyright : get_bloginfo('name') !!}
     </p>
