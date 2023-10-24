@@ -3,7 +3,7 @@ $custom_class = get_sub_field('custom_class');
 $title = get_sub_field('title');
 @endphp
 
-<section class=" {!! $custom_class ? ' ' . $custom_class : ' pt-12' !!} container mx-auto ">
+<section class=" {!! $custom_class ? ' ' . $custom_class : 'lg:pt-20 pt-12' !!} container mx-auto ">
 
     <div class="!px-0 text-center text-primary">
         {!! $title ? '<h2 class="text-[#39383A] capitalize font-bold text-center tracking-wide text-3xl lg:text-4xl mb-12  ">' . $title . '</h2>' : null !!}
