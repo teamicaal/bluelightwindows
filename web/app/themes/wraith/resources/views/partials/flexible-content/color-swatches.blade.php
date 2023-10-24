@@ -1,4 +1,5 @@
 @php
+$custom_class = get_sub_field('custom_class');
     $title = get_sub_field('title');
     $paragraph = get_sub_field('paragraph');
     $title = get_sub_field('title');
