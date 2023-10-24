@@ -9,8 +9,13 @@
 <section class="my-12">
     <div class="container mx-auto flex justify-center">
         <div class="lg:w-1/2 w-full">
+            @if ($title)
             <h2 class="text-3xl lg:text-4xl text-[#5B5B5B] font-serif font-bold mb-8">{{ $title }}</h2>
+            @endif
+
+            @if ($paragraph)
             <div class="mb-0 child-p:text-base child-p:font-normal child-p:text-[#7C7C7C]">{!! $paragraph !!}</div>
+            @endif
             @if (have_rows('colour_swatch'))
                 @php
                     $i = 0;
