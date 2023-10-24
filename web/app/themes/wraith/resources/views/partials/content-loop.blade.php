@@ -11,6 +11,9 @@
         @if (get_row_layout() == 'accordion')
             @include('partials.flexible-content.accordion')
         @endif
+        @if (get_row_layout() == 'privacy_text_block')
+            @include('partials.flexible-content.privacy-text-block')
+        @endif
         @if (get_row_layout() == 'anchor')
             @include('partials.flexible-content.anchor')
         @endif
