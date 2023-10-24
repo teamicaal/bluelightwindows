@@ -731,7 +731,7 @@ a {
   &::after {
     content: '';
     @apply absolute inset-0 w-full h-full mix-blend-multiply;
-    background: linear-gradient(90deg, rgba(12,115,163,0.88) 0%, rgba(12,115,163,0.43883490896358546) 51%, rgba(12,115,163,0.8758096988795518) 100%);
+    background: linear-gradient(90deg,#0c73a3e0,rgb(12 115 163 / 64%) 51%,rgba(12,115,163,.876));
     opacity: 0.79;
   }
 }
