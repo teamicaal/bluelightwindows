@@ -7,6 +7,7 @@
 			$i++;
 			$title = get_sub_field('title');
 			$image = get_sub_field('image');
+			$video_iframe_url = get_sub_field('video_iframe_url');
 			$image_alt = get_sub_field('image_alt');
 			$paragraph = get_sub_field('paragraph');
 			$label = get_sub_field('label');
@@ -14,6 +15,12 @@
 		@endphp
 			<div class="flex flex-col {{ $i % 2 == 0 ? 'lg:flex-row-reverse flex-col' : 'lg:flex-row flex-col' }}">
 				@if( $image )
+					<div class="w-full lg:w-3/5">
+						<div class="embed embed-16by9 ">
+							<iframe src="{!! $video_iframe_url !!}" class="object-cover-absolute w-full h-full"></iframe>
+						</div>
+					</div>
+				@else
 					<div class="w-full lg:w-1/2">
 						<div class="embed-16by9 overflow-hidden">
 							<img data-src="{{ $image['url'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}" class="lozad object-fit-cover w-full h-full inset-0">
