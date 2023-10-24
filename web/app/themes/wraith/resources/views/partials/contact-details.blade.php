@@ -15,7 +15,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
 <div class="{!! $colour == 'dark' ? ' bg-white border border-[#D0D0D0] py-5 px-7' : null !!}">
   <ul class="list-reset">
     @if( $brand_phone_label )
-    <li class="text-sm mb-4">
+    <li class="mb-4">
       <a href="tel:{{ $brand_phone_link }}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
         <i class="fa fa-phone float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <span class="table-cell font-normal font-body">{{ $brand_phone_label }}</span>
@@ -23,7 +23,7 @@ $social_pinterest = get_field('social_pinterest', 'option');
     </li>
     @endif
     @if( $brand_email )
-    <li class="text-sm mb-4">
+    <li class="mb-4">
       <a href="mailto:{{ $brand_email }}" class="{!! $colour == 'light' ? 'text-primary' : 'text-[#242D36]' !!}">
         <i class="fa fa-envelope-open float-left mr-3 {!! $colour == 'white' ? 'text-' . $colour   : 'text-primary' !!}"></i>
         <span class="table-cell font-normal font-body">{{ $brand_email }}</span>
