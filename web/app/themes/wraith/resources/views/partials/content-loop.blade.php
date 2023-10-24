@@ -41,6 +41,9 @@
         @if (get_row_layout() == 'colour_picker')
             @include('partials.flexible-content.colour_picker')
         @endif
+        @if (get_row_layout() == 'colour_swatches')
+            @include('partials.flexible-content.color-swatches')
+        @endif
         @if (get_row_layout() == 'ultraframe_cgi_block')
             @include('partials.flexible-content.ultraframe-cgi-block')
         @endif

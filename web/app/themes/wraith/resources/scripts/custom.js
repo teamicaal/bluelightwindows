@@ -496,4 +496,20 @@ $('.colourSwtachitem').on('click', function () {
     $('.cta-chat-fixed').removeClass('chat-open');
   };
 
+   // Color Picker
+
+   $('[data-image-src]').on('click', function () {
+
+    let that = $(this);
+    const parent = $(this).parent().parent().parent().parent().parent();
+
+    parent.find('[data-image-target]').parent().hide();
+
+    parent.find('[data-image-target]').each(function () {
+      if ($(this).data('image-target') === that.data('image-src')) {
+        $(this).parent().show();
+      }
+    })
+  })
+
 })(jQuery);
