@@ -240,6 +240,19 @@
   }
 }
 
+.btn-navigation {
+  @apply mx-4 mt-4;
+  a {
+    @apply inline-block text-[14px] bg-primary font-sans font-semibold tracking-wide rounded-md text-center leading-none mb-3 ;
+    @apply text-white p-3 #{!important};
+  }
+  &:hover {
+    a {
+      @apply bg-secondary;
+    }
+  }
+}
+
 @media (max-width: 1279px) {
   .brand {
       > img {
