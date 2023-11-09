@@ -19,7 +19,7 @@ $logo = get_sub_field('logo');
     </div>
   <div class="lg:px-24 px-4 h-full w-full relative">
    @if (get_sub_field('logo'))   
-    <img class="z-10 absolute top-20 left-8 w-15 h-15 object-contain" src=@sub('logo','url') alt="@sub('logo','alt')">
+    <img class="z-10 absolute top-12 left-4 w-15 h-15 object-contain" src=@sub('logo','url') alt="@sub('logo','alt')">
    @endif
     <div   class="content flex flex-col justify-center items-center text-center  h-full w-full relative z-10 gap-4">
       @if (get_sub_field('subtitle'))
