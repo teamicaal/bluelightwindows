@@ -2,11 +2,17 @@
 $banner_type = get_sub_field('banner_type');
 $images = get_sub_field('images');
 $count = count($images);
+$logo = get_sub_field('logo');
 @endphp
 
 
 <section class="product-overlay {{ $banner_type ? 'center' : 'start' }} relative h-[75vh]">
   <div class="!absolute inset-0 h-full w-full {{ $count > 1 ? 'slick-banner ' : '' }}">
+    @if ($logo)
+      <div class="items-center mb-8">
+        <img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="mx-auto max-h-[60px]">
+      </div>
+    @endif
     @foreach($images as $key=>$image )
       <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[75vh] sm:!min-h-[75vh] !min-h-[75vh]">
         <picture data-iesrc="{!! $image['url'] !!}">
