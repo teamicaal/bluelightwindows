@@ -8,13 +8,13 @@ $logo = get_sub_field('logo');
 
 <section class="product-overlay {{ $banner_type ? 'center' : 'start' }} relative h-[75vh]">
   <div class="!absolute inset-0 h-full w-full {{ $count > 1 ? 'slick-banner ' : '' }}">
-    @if ($logo)
+    @foreach($images as $key=>$image )
+      <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[75vh] sm:!min-h-[75vh] !min-h-[75vh]">
+        @if ($logo)
       <div class="items-center mb-8">
         <img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="mx-auto max-h-[60px]">
       </div>
     @endif
-    @foreach($images as $key=>$image )
-      <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[75vh] sm:!min-h-[75vh] !min-h-[75vh]">
         <picture data-iesrc="{!! $image['url'] !!}">
             <source media="(min-width: 768px)" srcset="{!! wp_get_attachment_image_srcset($image['id']) !!}" type="image/jpg" />
           <img src="{{ $image['url'] }}" data-src="{{ $image['url'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
