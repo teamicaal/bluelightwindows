@@ -10,11 +10,6 @@ $logo = get_sub_field('logo');
   <div class="!absolute inset-0 h-full w-full {{ $count > 1 ? 'slick-banner ' : '' }}">
     @foreach($images as $key=>$image )
       <div class="relative {!! $key != 0 ? 'hidden' : null !!} lg:!min-h-[75vh] sm:!min-h-[75vh] !min-h-[75vh]">
-        @if ($logo)
-      <div class="items-center mb-8">
-        <img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="mx-auto max-h-[60px]">
-      </div>
-    @endif
         <picture data-iesrc="{!! $image['url'] !!}">
             <source media="(min-width: 768px)" srcset="{!! wp_get_attachment_image_srcset($image['id']) !!}" type="image/jpg" />
           <img src="{{ $image['url'] }}" data-src="{{ $image['url'] }}" class="lozad object-fit-cover w-full h-full inset-0" alt="{!! $image['alt'] !!}" width="100%" height="100%">
@@ -24,7 +19,7 @@ $logo = get_sub_field('logo');
     </div>
   <div class="lg:px-24 px-4 h-full w-full relative">
    @if (get_sub_field('logo'))   
-    <img class="z-10 absolute top-20 right-0 w-15 h-15 object-contain" src=@sub('logo','url') alt="@sub('logo','alt')">
+    <img class="z-10 absolute top-20 left-8 w-15 h-15 object-contain" src=@sub('logo','url') alt="@sub('logo','alt')">
    @endif
     <div   class="content flex flex-col justify-center items-center text-center  h-full w-full relative z-10 gap-4">
       @if (get_sub_field('subtitle'))
