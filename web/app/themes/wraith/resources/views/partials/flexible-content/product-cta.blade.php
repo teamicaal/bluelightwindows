@@ -4,9 +4,10 @@ $paragraph = get_sub_field('paragraph');
 $image = get_sub_field('image');
 $button_link = get_sub_field('button_link');
 $button_label = get_sub_field('button_label');
+$custom_class = get_sub_field('custom_class');
 @endphp
 
-<section class=" pb-12 lg:pb-20">
+<section class=" {!! $custom_class ? $custom_class : ' pb-12 lg:pb-20'; !!} ">
 
     <div class="w-full overflow-hidden lg:flex lg:max-h-[550px]">
         <div class="w-full h-full lg:order-2 order-1 relative">  
