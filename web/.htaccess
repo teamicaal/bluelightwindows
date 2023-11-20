@@ -67,3 +67,22 @@ Deny from all
 Order Allow,Deny
 Deny from all
 </Files>
+
+# 301 Redirects
+Redirect 301 /windows /windows-in-ipswich-suffolk-and-essex/
+Redirect 301 /victorian-conservatories-ipswich-suffolk-and-essex /conservatories-ipswich-suffolk-and-essex/
+Redirect 301 /widgets /conservatories-ipswich-suffolk-and-essex/
+Redirect 301 /seamless-aluminium-gutters-ipswich-suffolk-essex /guttering-replacement-roofline-and-cladding-installation-suffolk-and-essex/
+Redirect 301 /upvc-patio-french-bi-fold-doors-ipswich-suffolk-essex /doors/
+Redirect 301 /sample-page /
+Redirect 301 /p-shaped-conservatories-ipswich-suffolk-and-essex /conservatories-ipswich-suffolk-and-essex/
+Redirect 301 /lean-to-conservatories-ipswich-suffolk-and-essex /conservatories-ipswich-suffolk-and-essex/
+Redirect 301 /hello-world /news/
+Redirect 301 /georgian-conservatories-ipswich-suffolk-and-essex /conservatories-ipswich-suffolk-and-essex/
+Redirect 301 /gable-end-conservatories-ipswich-suffolk-and-essex /conservatories-ipswich-suffolk-and-essex/
+Redirect 301 /gutter-replacement-ipswich-suffolk-essex /guttering-replacement-roofline-and-cladding-installation-suffolk-and-essex/
+Redirect 301 /faqs-blue-light-windows-ipswich /about-blue-light-windows-suffolk-and-essex/
+Redirect 301 /door-installation-in-ipswich-suffolk-and-essex /doors/
+Redirect 301 /covid-policy-blue-light-windows /
+Redirect 301 /bargeboards-fascia-and-soffits-ipswich-suffolk-essex /guttering-replacement-roofline-and-cladding-installation-suffolk-and-essex/
+Redirect 301 /author/nickunicorndesigners-co-uk /news/
