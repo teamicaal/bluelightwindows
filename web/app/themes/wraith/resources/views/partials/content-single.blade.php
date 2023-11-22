@@ -8,7 +8,7 @@
                   <a class="btn block md:inline-block bg-primary text-white hover:bg-[#E89604] rounded-full hover:border-none mb-4 md:mr-4 md:mb-0"
                       href="#article">Learn More</a>
                   <a class="btn block md:inline-block bg-transparent border rounded-full border-[#39383A] text-[#39383A] hover:bg-[#39383A] hover:text-white hover:border-[#39383A]"
-                      href="/contact/">Contact Us</a>
+                      href="/contact-us/">Contact Us</a>
               </div>
           </div>
           <div class="w-full lg:w-3/5">
