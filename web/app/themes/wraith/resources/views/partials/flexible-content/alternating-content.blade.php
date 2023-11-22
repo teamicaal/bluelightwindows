@@ -6,6 +6,7 @@
 			the_row();
 			$i++;
 			$title = get_sub_field('title');
+			$logo = get_sub_field('logo');
 			$image = get_sub_field('image');
 			$video_iframe_url = get_sub_field('video_iframe_url');
 			$image_alt = get_sub_field('image_alt');
@@ -29,7 +30,12 @@
 				@endif
 				<div class="w-full lg:w-1/2 px-4 lg:px-16 py-4 lg:py-0">
 					<div class="flex flex-col items-start justify-center h-full lg:max-w-[70%] w-full mx-auto">
+						<div class="flex">
 						{!! $title ? '<h2 class="lg:text-3xl text-2xl text-[#39383A] font-bold mb-8">' . $title . '</h2>' : null !!}
+						@if ($logo)   
+							<img class="z-10 absolute md:w-[140px] md:h-[140px] w-[90px] h-[90px] object-contain flex items-center jusify-center" src=@sub('logo','url') alt="@sub('logo','alt')">
+						@endif
+						</div>
 						{!! $paragraph ? '<div class="mb-0 child-p:text-base child-p:font-normal child-p:tracking-wide child-p:text-[#5D5D5D]">' . $paragraph . '</div>' : null !!}
 
 						@if ($label)
