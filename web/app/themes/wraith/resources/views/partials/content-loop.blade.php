@@ -23,6 +23,9 @@
         @if (get_row_layout() == 'product_banner')
             @include('partials.flexible-content.product-banner')
         @endif
+        @if (get_row_layout() == 'online_quote')
+            @include('partials.flexible-content.online-quote')
+        @endif
         @if (get_row_layout() == 'page_grid')
             @include('partials.flexible-content.page-grid')
         @endif
