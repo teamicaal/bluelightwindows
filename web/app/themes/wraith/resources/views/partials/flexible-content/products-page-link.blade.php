@@ -23,8 +23,7 @@
                             <a class="z-20" href="{{ get_the_permalink($page->ID) }}">
                                 <div class="embed embed-3by4 relative">
                                     <img class="object-cover absolute inset-0 w-full h-full lozad transform transition hover:scale-105"
-                                        data-src="{{ get_the_post_thumbnail_url($page->ID) }}"
-                                        src="{{ get_the_post_thumbnail_url($page->ID, 'lozad') }}"
+                                        src="@thumbnail(get_post($page), '4by3-sm', false)"
                                         alt="{!! $custom_title ? $custom_title : $page->title !!}" itemprop="thumbnail">
                                         <div class="product-link-overlay mix-blend-multiply absolute w-full h-full"></div>
                                     <h2
