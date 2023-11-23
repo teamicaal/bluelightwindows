@@ -38,7 +38,7 @@ $title = get_sub_field('title');
             @if($image)
             <div class="w-full lg:w-1/2 xl:w-2/5 mx-auto order-first lg:order-last mb-2 lg:mb-0">
                 <div class="embed embed-4by3 border border-primary">
-                    <img src="{{ $image['sizes']['4by3-md'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}"
+                    <img src="{{ $image['sizes']['4by3-sm'] }}" alt="{{ $image_alt ? $image_alt : $image['alt'] }}"
                         class="object-cover absolute h-full w-full lozad p-3">
                 </div>
             </div>
