@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /
 Disallow: /wr-admin
 Disallow: /wp/wp-admin
