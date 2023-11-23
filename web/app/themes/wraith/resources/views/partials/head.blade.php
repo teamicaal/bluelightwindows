@@ -15,6 +15,7 @@ $script_schema_global = get_field('script_schema_global', 'option');
   <link rel="mask-icon" href="@asset('images/favicon/safari-pinned-tab.svg')" color="#0076ff">
   <meta name="msapplication-TileColor" content="#0076ff">
   <meta name="theme-color" content="#ffffff">
+  <meta name="google-site-verification" content="93UetT7FxJ4rNsHnFHhfGQkn0tiyc8LcWgowKNcEtSY" />
   @php wp_head() @endphp
   {!! $script_header ? $script_header : null !!}
   {!! $script_schema_global ? $script_schema_global : null !!}
