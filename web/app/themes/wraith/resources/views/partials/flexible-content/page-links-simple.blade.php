@@ -30,7 +30,7 @@ $subtitle = get_sub_field('subtitle');
                     @if ($page)
                         <div class="w-full md:w-1/2 lg:w-1/5 px-2 product-link" style="flex: 0 0 auto;">
                             <a href="{{ get_the_permalink($page->ID) }}" class="embed-1by1 w-full relative rounded-sm overflow-hidden mb-6 lg:mb-0">
-                                <img src="@thumbnail(get_post($page), '4by3-sm', false)" alt="{!! $custom_title ? $custom_title : $page->title !!}" class="lozad object-fit-cover" />
+                                <img src="@thumbnail(get_post($page), 'thumbnail', false)" alt="{!! $custom_title ? $custom_title : $page->title !!}" class="lozad object-fit-cover" />
                                   <div class="w-full  product-bottom-bg bottom-0 left-0 p-4">
                                     <h4 class="text-xl lg:text-lg text-white font-bold flex self-center relative z-10  mb-0 tracking-widest">{!! $custom_title ? $custom_title : get_the_title() !!}</h4>
                                     <div class="product-bottom-content sm:hidden mt-2" >
