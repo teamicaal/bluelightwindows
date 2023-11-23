@@ -1,6 +1,8 @@
 @php
 $title = get_sub_field('title');
 $faq_schema = get_sub_field('faq_schema');
+$image_1 = get_sub_field('image_1');
+$image_2 = get_sub_field('image_2');
 @endphp
 
 <section id="accordion" class="bg-[#3392BF]">
@@ -8,7 +10,7 @@ $faq_schema = get_sub_field('faq_schema');
         <div class="lg:w-3/4 w-full lg:mx-0 mx-4 flex flex-col-reverse lg:flex-row gap-6 justify-around items-center relative z-10">
             <div class="w-full relative mb-4 md:mb-0 md:pr-8 pr-0 md:w-2/5 z-20 flex flex-col">
                 <div class="flex items-center gap-4">
-                    <img class="h-36 w-36 rounded-full object-cover" src="@sub('image_1','url')" alt="@sub('image_1','alt')">
+                    <img class="h-36 w-36 rounded-full object-cover" src="{{ $image_1['url'] }}" alt="{{ $image_1['alt'] }}">
                     <div class="arrow  items-end arrow--1">
                         <div></div>
                         <div></div>
@@ -21,7 +23,7 @@ $faq_schema = get_sub_field('faq_schema');
                         <div></div>
                         <div></div>
                     </div>
-                    <img class="h-52 w-52  rounded-full object-cover" src="@sub('image_2','url')" alt="@sub('image_2','alt')">
+                    <img class="h-52 w-52  rounded-full object-cover" src="{{ $image_2['url'] }}" alt="{{ $image_2['alt'] }}">
                 </div>
             </div>
            <div>
