@@ -125,5 +125,8 @@
         @if (get_row_layout() == 'quoting_engine')
             @include('partials.flexible-content.quoting-engine')
         @endif
+        @if (get_row_layout() == 'ppc_landing_banner')
+            @include('partials.flexible-content.ppc_landing_banner')
+        @endif
     @endwhile
 @endif
