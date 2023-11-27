@@ -7,7 +7,7 @@
                 @php $ppcCount = 0; @endphp
                 @while(have_rows('ppc_panes'))
                     @php $ppcCount++; the_row(); @endphp
-                    <div class="w-full h-full flex flex-wrap bg-white ppc_pane {{ $ppcCount < 2 ? '' : 'hidden' }}" data-pane="{{ $ppcCount }} p-2">
+                    <div class="w-full h-full flex flex-wrap bg-white ppc_pane {{ $ppcCount < 2 ? '' : 'hidden' }} p-2" data-pane="{{ $ppcCount }}">
                         <div class="progress flex w-full">
                             <div class="progressBar flex-grow px-2">
                                 <div class="progressCompletion" style="background-color:#3ea6ce; border-radius:2rem;"></div>
