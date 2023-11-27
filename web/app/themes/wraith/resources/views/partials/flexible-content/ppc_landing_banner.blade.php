@@ -3,12 +3,18 @@
     <div class="tint absolute w-full h-full product-overlay" style="background-color:black"></div>
     <div class="container mx-auto flex flex-wrap lg:flex-row-reverse" style="margin:200px auto 2rem; padding:1rem 0;">
         <div class="w-full lg:w-1/2 p-1">
-            @if(have_rows('ppc_form'))
+            @if(have_rows('ppc_panes'))
                 @php $ppcCount = 0; @endphp
                 @while(have_rows('ppc_panes'))
                     @php $ppcCount++; the_row(); @endphp
                     <div class="w-full h-full flex flex-wrap {{ $ppcCount < 2 ? '' : 'hidden' }}" data-pane="{{ $ppcCount }}">
-                        <h3 class="w-full text-center">{{ get_sub_field('pane_question') }}</h3>
+                        <div class="progress">
+                            <div class="progressBar">
+                                <div class="progressCompletion"></div>
+                            </div>
+                            <div>STEP {{ $ppcCount }}</div>
+                        </div>
+                        <h5 class="w-full text-center">{{ get_sub_field('pane_question') }}</h5>
                         @if(have_rows('ppc_questions'))
                             @while(have_rows('ppc_questions'))
                                 @php the_row(); @endphp
