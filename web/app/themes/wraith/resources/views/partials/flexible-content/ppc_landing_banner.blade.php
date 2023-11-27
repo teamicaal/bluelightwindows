@@ -49,8 +49,8 @@
                 <div class="formProper w-full h-full flex justify-center items-center bg-white hidden ppc_pane pb-2" data-pane="{{ $ppcCount+2 }}" data-lastpane="{{ $ppcCount+2 }}">
                     <form class="icaal-contact-form w-full h-full flex flex-wrap" data-form="ppc_landing_form">
                         <div class="progress flex w-full">
-                            <div class="progressBar flex-grow px-2">
-                                <div class="progressCompletion" style="background-color:#3ea6ce; border-radius:2rem;"></div>
+                            <div class="progressBar flex-grow p-2">
+                                <div class="progressCompletion" style="background-color:#3ea6ce; border-radius:1rem; height:.75rem"></div>
                             </div>
                             <div style="padding:0 1.5rem 0 .5rem;">STEP {{ $ppcCount+2 }}</div>
                         </div>
