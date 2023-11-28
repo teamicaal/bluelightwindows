@@ -94,10 +94,10 @@
                       $('[name=' + index + ']').addClass('is-invalid').removeClass('is-valid');
                       $('[name=' + index + ']').next('.invalid-feedback').text(value);
                   });
-                  // $response.addAlert('danger', 'Validation Errors', errors);
+                  if( $form.data('form') === 'ppc_landing_form')
+                    $response.addAlert('danger', 'Validation Errors', errors);
                   $form.trigger('complete');
               } else if (error) {
-                    console.log(error, $response.addAlert)
                   $response.addAlert('danger', error);
                   $form.trigger('complete');
               }
