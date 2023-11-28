@@ -77,7 +77,7 @@
 @if(have_rows('info_under_banner'))
     <section>
         <div class="container flex">
-            @while(have_rows())
+            @while(have_rows('info_under_banner'))
                 <div class="w-full flex flex-col justify-center items-center">
                     @if( get_sub_field('image'))
                         <img src="{{ get_sub_field('image')['url'] }}" alt="{{ get_sub_field('image')['alt'] }}" class="m-2 object-contain mx-auto" style="max-width:100%;">
