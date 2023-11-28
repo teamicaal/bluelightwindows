@@ -76,19 +76,23 @@
 </section>
 @if(have_rows('info_under_banner'))
     <section class="bg-primary">
-        <div class="container mx-auto flex py-10 ppcBelowBannerInfo">
-            @while(have_rows('info_under_banner'))
-                @php the_row() @endphp
-                <div class="w-full flex flex-col justify-center items-center p-8">
-                    @if( get_sub_field('image'))
-                        <img src="{{ get_sub_field('image')['url'] }}" alt="{{ get_sub_field('image')['alt'] }}" class="m-2 object-contain mx-auto w-full" style="max-width:200px;">
-                    @elseif( get_sub_field('svg'))
-                        <div class="mx-auto m-2" style="max-width:5rem; max-height:5rem;">{{ get_sub_field('svg') }}</div>
-                    @endif
-                    <h3 class="w-full text-center text-3xl font-semibold text-white">{{ get_sub_field('title') }}</h3>    
-                    <div class="w-full text-center text-white">{{ get_sub_field('text_block') }}</div>
-                </div>    
-            @endwhile
+        <div class="container mx-auto py-10">
+            <div class="w-full flex ppcBelowBannerInfo">
+                @while(have_rows('info_under_banner'))
+                    @php the_row() @endphp
+                    <div class="w-1/3">
+                        <div class="w-full flex flex-col justify-center items-center p-8">
+                            @if( get_sub_field('image'))
+                                <img src="{{ get_sub_field('image')['url'] }}" alt="{{ get_sub_field('image')['alt'] }}" class="m-2 object-contain mx-auto w-full" style="max-width:200px;">
+                            @elseif( get_sub_field('svg'))
+                                <div class="mx-auto m-2" style="max-width:5rem; max-height:5rem;">{{ get_sub_field('svg') }}</div>
+                            @endif
+                            <h3 class="w-full text-center text-3xl font-semibold text-white">{{ get_sub_field('title') }}</h3>    
+                            <div class="w-full text-center text-white">{{ get_sub_field('text_block') }}</div>
+                        </div>  
+                    </div>  
+                @endwhile
+            </div>
         </div>
     </section>
 @endif
@@ -182,15 +186,16 @@
             jQuery('.ppcBelowBannerInfo').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                variableWidth: true, 
+                centerMode: true,
+                centerPadding: '25%',
+                infinite:true, 
                 dots: false,
                 arrows: false,
-                infinite: true,
                 draggable: true,
                 autoplay: true,
                 autoplaySpeed: 4000, 
-                pauseOnHover: false,
-                pauseOnFocus: false,
+                pauseOnHover: true,
+                pauseOnFocus: true,
                 responsive: [
                     {
                         breakpoint: 1024,
