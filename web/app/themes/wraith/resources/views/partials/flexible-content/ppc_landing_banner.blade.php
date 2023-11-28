@@ -75,7 +75,7 @@
     </div>
 </section>
 @if(have_rows('info_under_banner'))
-    <section>
+    <section class="bg-primary">
         <div class="container flex">
             @while(have_rows('info_under_banner'))
                 <div class="w-full flex flex-col justify-center items-center">
