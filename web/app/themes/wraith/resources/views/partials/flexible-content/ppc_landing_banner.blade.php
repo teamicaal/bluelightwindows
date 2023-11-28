@@ -74,6 +74,23 @@
         </div>
     </div>
 </section>
+@if(have_rows('info_under_banner'))
+    <section>
+        <div class="container flex">
+            @while(have_rows())
+                <div class="w-full flex flex-col justify-center items-center">
+                    @if( get_sub_field('image'))
+                        <img src="{{ get_sub_field('image')['url'] }}" alt="{{ get_sub_field('image')['alt'] }}" class="m-2 object-contain mx-auto" style="max-width:100%;">
+                    @elseif( get_sub_field('svg'))
+                        <div class="mx-auto m-2" style="max-width:5rem; max-height:5rem;">{{ get_sub_field('svg') }}</div>
+                    @endif
+                    <h3 class="w-full text-center text-xl font-semibold text-white">{{ get_sub_field('title') }}</h3>    
+                    <div class="w-full text-center text-white">{{ get_sub_field('text_block') }}</div>
+                </div>    
+            @endwhile
+        </div>
+    </section>
+@endif
 <style>
     .hoveroar{ transition:transform .2s; }
     .hoveroar:hover{ transform:scale(1.02); }
