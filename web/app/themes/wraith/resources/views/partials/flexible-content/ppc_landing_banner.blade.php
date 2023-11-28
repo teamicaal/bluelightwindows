@@ -10,7 +10,7 @@
                     <div class="w-full h-full flex flex-wrap bg-white ppc_pane {{ $ppcCount < 2 ? '' : 'hidden' }} p-3" data-pane="{{ $ppcCount }}">
                         <div class="progress flex w-full">
                             <div class="progressBar flex-grow px-2">
-                                <div class="progressCompletion" style="background-color:#3ea6ce; border-radius:2rem;"></div>
+                                <div class="progressCompletion" style=""></div>
                             </div>
                             <div style="padding:0 1.5rem 0 .5rem;">STEP {{ $ppcCount }}</div>
                         </div>
@@ -35,7 +35,7 @@
                 <div class="postcodeCheck w-full h-full flex flex-wrap justify-center items-center bg-white hidden ppc_pane" data-pane="{{ $ppcCount+1 }}">
                     <div class="progress flex w-full">
                         <div class="progressBar flex-grow px-2">
-                            <div class="progressCompletion" style="background-color:#3ea6ce; border-radius:2rem;"></div>
+                            <div class="progressCompletion" style=""></div>
                         </div>
                         <div style="padding:0 1.5rem 0 .5rem;">STEP {{ $ppcCount }}</div>
                     </div>
@@ -50,7 +50,7 @@
                     <form class="icaal-contact-form w-full h-full flex flex-wrap" data-form="ppc_landing_form">
                         <div class="progress flex w-full">
                             <div class="progressBar flex-grow p-2">
-                                <div class="progressCompletion" style="background-color:#3ea6ce; border-radius:1rem; height:.75rem"></div>
+                                <div class="progressCompletion" style=""></div>
                             </div>
                             <div style="padding:0 1.5rem 0 .5rem;">STEP {{ $ppcCount+2 }}</div>
                         </div>
@@ -61,6 +61,7 @@
                         <input type="text" class="ppc-form-input hidden postcodeInForm" name="postcode" >
                         <input type="text" class="ppc-form-input hidden chosenValues" name="choices">
                         <div class="w-full flex justify-center">
+                            <div class="hidden customFormResponse response"></div>
                             <button id="submit" type="submit" class="btn btn-primary hoveroar text-white my-2 mx-auto" style="background:#e89604;">SUBMIT</button>
                         </div>
                     </form>
@@ -82,7 +83,7 @@
     .hoveroar:hover img{ transform:scale(1.05); }
     .hoveroar:active img{ transform:scale(.99); }
     .children\:text-white *{ color:white; }
-
+    .progressCompletion{ background-color:#3ea6ce; border-radius:1rem; height:.75rem; width:10%; transition:all .2s; }
     form.icaal-contact-form input.ppc-form-input{ 
         border:none; 
         border-bottom:2px solid #e89604; 
@@ -91,7 +92,7 @@
         height:fit-content;
     }
     input.ppc-form-input:focus{ outline:none; }
-
+    .is-invalid{ border-bottom:2px solid #ff5400!important; }
     @media(min-width:1024px){
         .lg\:text-left{ text-align:left; }
     }
@@ -137,12 +138,13 @@
                 url: 'https://api.postcodes.io/postcodes/' + postcode,
                 method: 'get'
             }).done(function(response) {
+                const postcodePane = $('.postcodeCheck').data('pane')
+                $('.progressCompletion').css('width', (postcodePane/maximumPanes*100)+'%' )
 				gtag('event', 'ppc_postcode_submit', {
 				    'event_category': 'ppc_postcode_submit_event'
 				})
                 formData.postcode = response.result.postcode
                 $response.empty();
-                const postcodePane = $('.postcodeCheck').data('pane')
                 console.log('postcode pane: ',postcodePane)
                 $(`[data-pane=${ postcodePane }]`).fadeOut(function(){
                     $(`[data-pane=${ postcodePane + 1 }]`).fadeIn()

@@ -2,7 +2,7 @@
   $('.icaal-contact-form').on('submit', function (e) {
       var $form = $(this);
       var form_submission = $form.attr('data-form');
-
+      
       var $submit = $form.find('.submit');
       var $response = $form.find('.response');
       var $data = $form.serializeArray();
@@ -81,6 +81,7 @@
 
               $form.trigger('success');
               $form.trigger('complete');
+
           }).fail(function (response) {
               var errors = response.responseJSON.errors;
               var error = response.responseJSON.error;
@@ -96,6 +97,7 @@
                   // $response.addAlert('danger', 'Validation Errors', errors);
                   $form.trigger('complete');
               } else if (error) {
+                    console.log(error, $response.addAlert)
                   $response.addAlert('danger', error);
                   $form.trigger('complete');
               }
@@ -106,6 +108,13 @@
       }
 
       $form.on('success', function () {
+        if( $form.data('form') === 'ppc_landing_form'){
+           if (typeof gtag == 'function') {
+               gtag('event', 'ppc_landing_form_submit', {
+                   'event_category': 'ppc_landing_form_submit_event'
+               });
+           }
+        }
 
           if (typeof ga == 'function') {
               ga('send', 'event', 'Enquiry', 'submit');
