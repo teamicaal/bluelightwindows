@@ -62,7 +62,7 @@
                         <input type="text" class="ppc-form-input hidden chosenValues" name="choices">
                         <div class="w-full flex justify-center">
                             <div class="hidden customFormResponse response"></div>
-                            <button id="submit" type="submit" class="btn btn-primary hoveroar text-white my-2 mx-auto" style="background:#e89604;">SUBMIT</button>
+                            <button id="submit" type="submit" class="btn btn-primary hoveroar text-white" style="background:#e89604; max-height:3rem; margin:1rem;">SUBMIT</button>
                         </div>
                     </form>
                 </div>
@@ -91,6 +91,7 @@
         max-width:35%; border-radius:0;
         height:fit-content;
     }
+    .alert.alert-danger * { color:#ff5400; }
     input.ppc-form-input:focus{ outline:none; }
     .is-invalid{ border-bottom:2px solid #ff5400!important; }
     @media(min-width:1024px){

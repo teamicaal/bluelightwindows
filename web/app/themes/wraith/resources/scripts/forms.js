@@ -44,7 +44,7 @@
       if (api_key_found) {
 
           $submit.addClass('btn-loading').prop('disabled', true);
-          $response.empty();
+          $response.empty().addClass('hidden');
 
           $.each($data, function (index, field) {
               data.append(field.name, field.value);
@@ -95,7 +95,7 @@
                       $('[name=' + index + ']').next('.invalid-feedback').text(value);
                   });
                   if( $form.data('form') === 'ppc_landing_form')
-                    $response.addAlert('danger', 'Validation Errors', errors);
+                    $response.removeClass('hidden').addAlert('danger', 'Validation Errors', errors);
                   $form.trigger('complete');
               } else if (error) {
                   $response.addAlert('danger', error);
@@ -159,7 +159,7 @@
               itemsArray.push('<li>' + error + '</li>');
           });
           items = itemsArray.join('');
-          items = '<p style="font-size: 1.4em; font-weight: bold;">' + message + '</p>' + '<ul class="mb-0">' + items + '</ul>';
+          items = '<p style="font-size: 1em; margin-bottom:.2rem; font-weight: bold;">' + message + '</p>' + '<ul class="mb-0">' + items + '</ul>';
           message = items;
       }
 
