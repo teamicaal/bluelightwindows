@@ -351,8 +351,8 @@
         nextPane();
 
         gtag('event', 'Click', {
-          'event_category': 'PPC Form Complete',
-          'event_label': 'Finished Quote'
+          'event_category': 'conversion_form_complete',
+          'event_category': 'conversion_form_event'
         });
 
       }).fail(function(response) {

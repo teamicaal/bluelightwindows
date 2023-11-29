@@ -24,18 +24,18 @@ $path = get_sub_field('path');
   (function($) {
     var engine = $('#engine-container').Engine('pk_d3wkOfNB7atIvPKC0K4iQONm', {
       start: function(event) {
-        gtag('event', 'Start Quote', {
-          event_category: 'Quoting Engine',
+        gtag('event', 'start_quote', {
+          event_name: 'start_quote_event',
         })
       },
       postcode: function(event) {
-        gtag('event', 'Enter Postcode', {
-          event_category: 'Quoting Engine',
+        gtag('event', 'enter_postcode', {
+          event_name: 'enter_postcode',
         })
       },
       complete: function(event) {
-        gtag('event', 'Complete Quote', {
-          event_category: 'Quoting Engine',
+        gtag('event', 'complete_quote', {
+          event_name: 'complete_quote',
         })
       }
     })
