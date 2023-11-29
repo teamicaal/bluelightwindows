@@ -1,4 +1,4 @@
-<section class="w-full relative overflow-hidden">
+<section id="ppc_landing_banner" class="w-full relative overflow-hidden">
     <img src="{{ get_sub_field('banner_background')['url'] }}" alt="" class="w-full h-full absolute object-cover">
     <div class="tint absolute w-full h-full product-overlay"></div>
     <div class="relative container mx-auto flex flex-wrap lg:flex-row-reverse" style="margin:200px auto 2rem; padding:1rem 0;">
