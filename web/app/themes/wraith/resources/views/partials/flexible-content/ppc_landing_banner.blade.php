@@ -85,7 +85,7 @@
                             @if( get_sub_field('image'))
                                 <img src="{{ get_sub_field('image')['url'] }}" alt="{{ get_sub_field('image')['alt'] }}" class="m-2 object-contain mx-auto w-full" style="max-width:200px;">
                             @elseif( get_sub_field('svg'))
-                                <div class="mx-auto m-2" style="max-width:5rem; max-height:5rem;">{!! get_sub_field('svg') !!}</div>
+                                <div class="mx-auto m-2 ppc-svg-icon-holder" style="">{!! get_sub_field('svg') !!}</div>
                             @endif
                             <h3 class="w-full text-center text-3xl font-semibold text-white">{{ get_sub_field('title') }}</h3>    
                             <div class="w-full text-center text-white">{{ get_sub_field('text_block') }}</div>
@@ -100,6 +100,7 @@
     .hoveroar{ transition:transform .2s; }
     .hoveroar:hover{ transform:scale(1.02); }
     .hoveroar:active{ transform:scale(.97); }
+    .ppc-svg-icon-holder svg{ height:10rem; width:10rem; fill:white; margin:1rem 0; }
 
     .hoveroar img{ transition:transform .6s; }
     .hoveroar:hover img{ transform:scale(1.05); }
