@@ -6,7 +6,7 @@
 
 <section class="bg-gray-100 py-12">
   <div class="container mx-auto">
-    <div class="bg-white shadow-card rounded-sm text-center px-8 lg:px-12 py-12 w-full lg:w-5/6 mx-auto">
+    <div class="bg-white shadow-card rounded-sm text-center px-8 lg:px-12 py-12 w-full lg:w-5/6 mx-auto flex flex-col items-center">
       {!! $title ? '<h2 class="mb-4 font-bold text-3xl">' . $title . '</h2>' : null !!}
       {!! $content ? $content : null !!}
       @php
