@@ -100,7 +100,7 @@
     .hoveroar{ transition:transform .2s; }
     .hoveroar:hover{ transform:scale(1.02); }
     .hoveroar:active{ transform:scale(.97); }
-    .ppc-svg-icon-holder svg{ height:10rem; width:10rem; fill:white; margin:1rem 0; }
+    .ppc-svg-icon-holder svg{ height:8rem; width:8rem; fill:white; margin:1rem 0; }
 
     .hoveroar img{ transition:transform .6s; }
     .hoveroar:hover img{ transform:scale(1.05); }
@@ -119,6 +119,7 @@
     .is-invalid{ border-bottom:2px solid #ff5400!important; }
     @media(min-width:1024px){
         .lg\:text-left{ text-align:left; }
+        .ppc-svg-icon-holder svg{ height:11rem; width:11rem; fill:white; margin:1rem 0; }
     }
 </style>
 <script>
