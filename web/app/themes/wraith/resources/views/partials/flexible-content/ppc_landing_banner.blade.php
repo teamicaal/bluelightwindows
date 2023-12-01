@@ -68,7 +68,7 @@
                 </div>
             @endif
         </div>
-        <div class="w-full lg:w-1/2 p-1 flex flex-col items-center justify-end">
+        <div class="w-full lg:w-1/2 p-1 flex flex-col items-center">
             <h1 class="w-full text-center lg:text-left text-white">{{ get_sub_field('title') }}</h1>
             <div class="content w-full text-center lg:text-left text-white children:text-white">{!! get_sub_field('content') !!}</div>
         </div>
