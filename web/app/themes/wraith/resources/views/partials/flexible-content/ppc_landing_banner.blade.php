@@ -101,7 +101,7 @@
     .hoveroar:hover{ transform:scale(1.02); }
     .hoveroar:active{ transform:scale(.97); }
     .ppc-svg-icon-holder svg{ height:8rem; width:8rem; fill:white; margin:1rem 0; }
-
+    .ppc_pane{ min-height:280px; }
     .hoveroar img{ transition:transform .6s; }
     .hoveroar:hover img{ transform:scale(1.05); }
     .hoveroar:active img{ transform:scale(.99); }
