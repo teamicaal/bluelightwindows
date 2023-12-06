@@ -115,7 +115,7 @@
                });
            }
            $('.formProper').empty().append(`
-           <p style="height:100%; margin:0; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+           <p style="height:100%; margin:auto; display:flex; flex-direction:column; justify-content:center; align-items:center;">
                 <span style="color:rgb(107 114 128); font-size:1.5rem; font-weight:700;">Thank you!</span>
                 <span style="color:rgb(107 114 128); ">We will contact you shortly</span>
            </p>
