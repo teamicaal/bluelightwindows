@@ -71,22 +71,22 @@
   (function($) {
     var engine = $('#engine-container').Engine('pk_d3wkOfNB7atIvPKC0K4iQONm', {
       start: function(event) {
-        gtag('event', 'start_quote', {
-          event_name: 'start_quote_event',
+        gtag('event', 'Start Quote', {
+          event_category: 'Quoting Engine',
         })
       },
       postcode: function(event) {
-        gtag('event', 'enter_postcode', {
-          event_name: 'enter_postcode',
+        gtag('event', 'Enter Postcode', {
+          event_category: 'Quoting Engine',
         })
       },
       complete: function(event) {
-        gtag('event', 'complete_quote', {
-          event_name: 'complete_quote',
+        gtag('event', 'Complete Quote', {
+          event_category: 'Quoting Engine',
         })
       }
     })
-
+    
     engine.render()
     @if (is_page(2309))
             $(window).load(function() {
