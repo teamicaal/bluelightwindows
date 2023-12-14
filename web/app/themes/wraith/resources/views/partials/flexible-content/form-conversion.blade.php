@@ -350,9 +350,8 @@
       }).done(function(response) {
         nextPane();
 
-        gtag('event', 'Click', {
+        gtag('event', 'conversion_form', {
           'event_category': 'conversion_form_complete',
-          'event_category': 'conversion_form_event'
         });
 
       }).fail(function(response) {

@@ -122,16 +122,10 @@
            `)
         }
 
-          if (typeof ga == 'function') {
-              ga('send', 'event', 'Enquiry', 'submit');
-          }
           if (typeof gtag == 'function') {
               gtag('event', 'Enquiry', {
                   'event_category': 'submit'
               });
-          }
-          if (typeof __gaTracker == 'function') {
-              __gaTracker('send', 'event', 'Enquiry', 'submit');
           }
 
       });
