@@ -66,4 +66,33 @@
     </a> --}}
   </div>
   @include('partials.components.sticky_cta')
+  <script src="https://js.quotingengine.co.uk/v1"></script>
+<script>
+  (function($) {
+    var engine = $('#engine-container').Engine('pk_d3wkOfNB7atIvPKC0K4iQONm', {
+      start: function(event) {
+        gtag('event', 'start_quote', {
+          event_name: 'start_quote_event',
+        })
+      },
+      postcode: function(event) {
+        gtag('event', 'enter_postcode', {
+          event_name: 'enter_postcode',
+        })
+      },
+      complete: function(event) {
+        gtag('event', 'complete_quote', {
+          event_name: 'complete_quote',
+        })
+      }
+    })
+
+    engine.render()
+    @if (is_page(2309))
+            $(window).load(function() {
+                engine.open();
+            });
+        @endif
+  })(jQuery)
+</script>
 </section>
