@@ -109,11 +109,12 @@
 
       $form.on('success', function () {
         if( $form.data('form') === 'ppc_landing_form'){
-           if (typeof gtag == 'function') {
-               gtag('event', 'ppc_landing_form_submit', {
-                   'event_category': 'ppc_landing_form_submit_event'
-               });
-           }
+            if (typeof gtag == 'function') {
+                gtag('event', 'ppc_landing_form_submit', {
+                    'event_category': 'ppc_landing_form_submit_event'
+                });
+                console.log('ppc_landing_form_submit');
+            }
            $('.formProper').empty().append(`
            <p style="height:100%; margin:auto; display:flex; flex-direction:column; justify-content:center; align-items:center;">
                 <span style="color:rgb(107 114 128); font-size:1.5rem; font-weight:700;">Thank you!</span>
@@ -122,12 +123,14 @@
            `)
         }
 
-          if (typeof gtag == 'function') {
-              gtag('event', 'Enquiry', {
-                  'event_category': 'submit'
-              });
+        if($form.data('form') === 'contact') {
+            if (typeof gtag == 'function') {
+            gtag('event', 'Enquiry', {
+                'event_category': 'submit'
+            });
           }
-
+        }  
+            
       });
 
       $form.on('complete', function () {
