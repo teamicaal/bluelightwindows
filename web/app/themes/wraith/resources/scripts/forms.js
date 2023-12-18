@@ -108,7 +108,7 @@
       }
 
       $form.on('success', function () {
-        if( $form.data('form') === 'ppc_landing_form'){
+        if( $form.data('form') === 'ppc_landing_form' ) {
             if (typeof gtag == 'function') {
                 gtag('event', 'ppc_landing_form_submit', {
                     'event_category': 'ppc_landing_form_submit_event'
@@ -123,12 +123,11 @@
            `)
         }
 
-        if($form.data('form') === 'contact') {
-            if (typeof gtag == 'function') {
+        if($form.data('form') === 'contact' && typeof gtag == 'function') {
             gtag('event', 'Enquiry', {
                 'event_category': 'submit'
             });
-          }
+            console.log('Enquiry');
         }  
             
       });
