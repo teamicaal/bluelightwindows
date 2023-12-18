@@ -136,7 +136,6 @@
             const val = $(this).data('value')
             const pane = $(this).closest('.ppc_pane').data('pane')
             pickedVals  = [...pickedVals, val]
-            console.table({pickedVals,val,pane})
             $('.progressCompletion').css('width', (pane/maximumPanes*100)+'%' )
             $(`.ppc_pane[data-pane=${pane}]`).fadeOut(function(){
                 $(`.ppc_pane[data-pane=${pane+1}]`).fadeIn().css('display','flex')
