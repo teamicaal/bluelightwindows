@@ -111,7 +111,8 @@
         if( $form.data('form') === 'ppc_landing_form' ) {
             if (typeof gtag == 'function') {
                 gtag('event', 'ppc_landing_form_submit', {
-                    'event_category': 'ppc_landing_form_submit_event'
+                    'event_category': 'ppc_landing_form_submit_event',
+                    'event_name': 'ppc_landing_form'
                 });
                 console.log('ppc_landing_form_submit');
             }

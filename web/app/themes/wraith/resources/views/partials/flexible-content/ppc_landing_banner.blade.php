@@ -142,7 +142,6 @@
             })
         })
         $('#validate-postcode').click(function(e) {
-            console.log('click')
             e.preventDefault()
             let $this = $(this);
             $response = $('.customFormResponse')
