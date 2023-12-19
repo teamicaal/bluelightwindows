@@ -175,6 +175,7 @@
                 })
                 $('.postcodeInForm').val(postcode)
                 $('.chosenValues').val( pickedVals.join(', ') )
+                cosnole.log('postcode')
             }).fail(function(response) {
                 $response.empty();
                 $response.addAlert('danger', 'Please enter a valid UK postcode.');

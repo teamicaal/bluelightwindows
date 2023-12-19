@@ -128,13 +128,16 @@
                 'event_category': 'submit'
             });
             console.log('Enquiry');
-        }  
+        }
+
+        console.log('success');
             
       });
 
       $form.on('complete', function () {
           var custom_html = icaal_options['custom_html'];
           $response.append(custom_html);
+          console.log('complete');
       });
 
       // $('html, body').animate({scrollTop: $response.offset().top - 130}, 100);
