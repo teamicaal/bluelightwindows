@@ -122,16 +122,16 @@
                 <span style="color:rgb(107 114 128); ">We will contact you shortly</span>
            </p>
            `)
-        };
+        }
 
         if($form.data('form') === 'contact' && typeof gtag == 'function') {
             gtag('event', 'Enquiry', {
                 'event_category': 'submit'
             });
             console.log('Enquiry');
-        };
+        }
 
-        console.log('success')
+        console.log('success');
             
       });
 
